@@ -1,3 +1,44 @@
+"use strict";
+
+function onMouseDown(ev)  {
+ // alert("hello mousedown");
+ let xOffset = ev.offsetX;
+ let yOffset = ev.offsetY;
+ 
+ //alert(`xCoordinate = ${xOffset}, yCoordinate = ${yOffset}`);
+positionInitiale = {x: xOffset, y: yOffset}
+ drawing = true;
+// alert(`drawing ${drawing}`);
+}
+
+function onMouseMove(ev) {
+
+    ctx.beginPath();
+    
+    ctx.moveTo(positionInitiale.x, positionInitiale.y);
+    ctx.lineTo(ev.offsetX, ev.OffsetY);
+    ctx.stroke();
+    ctx.closePath();
+   /* 
+   alert(`positionInitialeX = ${positionInitiale.x}, 
+    positionInitialeY = ${positionInitiale.y} 
+    ev.offsetX = ${ev.offsetX}, ev.offsetY = ${ev.offsetY}
+    `);
+    */
+   
+  
+  
+}
+
+function onMouseOut(ev) {
+  
+  drawing = false;
+}
+
+function onMouseUp(ev) {
+  
+  drawing = false;
+}
 
 function onClickTraitFin() {
   // alert("hello FIN ");
@@ -58,4 +99,5 @@ function onClickRubber() {
 function onClickEyeDropper() {
   // alert("hello Eye dropper");
 }
+
 
