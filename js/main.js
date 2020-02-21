@@ -1,7 +1,19 @@
 "use strict";
 
-let drawing = true;
+
+let canv = document.getElementById("ardoiseCanvas");
+let ctx = canv.getContext("2d");
+
+let drawing = false;
 let positionInitiale = {};
+
+ctx.lineWidth = "15";
+ctx.strokeStyle = "black";
+
+canv.addEventListener("mousedown", onMouseDown);
+canv.addEventListener("mousemove", onMouseMove);
+canv.addEventListener("mouseout", onMouseOut);
+canv.addEventListener("mouseup", onMouseUp);
 
 
 

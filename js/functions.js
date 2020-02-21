@@ -6,28 +6,28 @@ function onMouseDown(ev)  {
  let yOffset = ev.offsetY;
  
  //alert(`xCoordinate = ${xOffset}, yCoordinate = ${yOffset}`);
+
 positionInitiale = {x: xOffset, y: yOffset}
  drawing = true;
 // alert(`drawing ${drawing}`);
+
 }
 
 function onMouseMove(ev) {
 
+  if(drawing)
+  {
     ctx.beginPath();
-    
     ctx.moveTo(positionInitiale.x, positionInitiale.y);
-    ctx.lineTo(ev.offsetX, ev.OffsetY);
+    ctx.lineTo(ev.offsetX, ev.offsetY);
     ctx.stroke();
     ctx.closePath();
-   /* 
-   alert(`positionInitialeX = ${positionInitiale.x}, 
+    positionInitiale = {x: ev.offsetX, y: ev.offsetY}
+    /*console.log(`positionInitialeX = ${positionInitiale.x}, 
     positionInitialeY = ${positionInitiale.y} 
     ev.offsetX = ${ev.offsetX}, ev.offsetY = ${ev.offsetY}
-    `);
-    */
-   
-  
-  
+    `);*/
+  }
 }
 
 function onMouseOut(ev) {
