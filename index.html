@@ -5,6 +5,7 @@
     <title> ardoise magique </title>
     <link type="text/css" rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/3de7af4f41.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/functions.js"></script>
   </head>
   <body>
@@ -17,23 +18,22 @@
       </div>
       <div class="toolsOptions">
         <h4 id="listeCouleur">Couleur</h4>
-        <ul>
-          
-          <li><button id="blackColor"></button></li>
-          <li><button id="brownColor"></button></li>
-          <li><button id="redColor"></button></li>
-          <li><button id="orangeColor"></button></li>
-          <li><button id="greenColor"></button></li>
-          <li><button id="vermisselleColor"></button></li>
-          <li><button id="greenBlueColor"></button></li>
+        <ul>  
+          <li><button class="boutonListeCouleur" data-lineColor="black" id="black"></button></li>
+          <li><button class="boutonListeCouleur" data-lineColor="#602627" id="#602627"></button></li>
+          <li><button class="boutonListeCouleur" data-lineColor="#c01525" id="#c01525"></button></li>
+          <li><button class="boutonListeCouleur" data-lineColor="#ffbb38" id="#ffbb38"></button></li>
+          <li><button class="boutonListeCouleur" data-lineColor="#00b635" id="#00b635"></button></li>
+          <li><button class="boutonListeCouleur" data-lineColor="#009d98" id="#009d98"></button></li>
+          <li><button class="boutonListeCouleur" data-lineColor="#0078a2" id="#0078a2"></button></li>
         </ul>
       </div>
       <div class="toolsOptions">
         <ul id="epaissuerTrais">
           <li>Epaisseur</li>
-          <li><button id="traitFin">Fin</button></li>
-          <li><button id="traitNormal">Normal</button></li>
-          <li><button id="traitEpais">Epais</button></li>
+          <li><button class="boutonEpaisseurTrais" data-lineWidth="3" id="3">Fin</button></li>
+          <li><button class="boutonEpaisseurTrais" data-lineWidth="7" id="7">Normal</button></li>
+          <li><button class="boutonEpaisseurTrais" data-lineWidth="11" id="11">Epais</button></li>
         </ul>
       </div>
      

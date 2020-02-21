@@ -55,31 +55,33 @@ ul li button {
   height: 50px;  
 }
 
-#blackColor {
+button[data-lineColor='black'] {
   background-color: rgb(29, 22, 22);
 }
 
-#brownColor {
+button[data-lineColor="#602627"] {
   background-color: #602627;
 }
 
-#redColor {
+
+button[data-lineColor="#c01525"] {
   background-color: #c01525;
 }
 
-#orangeColor {
+
+button[data-lineColor="#ffbb38"] {
   background-color: #ffbb38;
 }
 
-#greenColor {
+button[data-lineColor="#00b635"] {
   background-color: #00b635;
 }
 
-#vermisselleColor {
+button[data-lineColor="#009d98"] {
   background-color: #009d98;
 }
 
-#greenBlueColor {
+button[data-lineColor="#0078a2"] {
   background-color: #0078a2;
 }
 
